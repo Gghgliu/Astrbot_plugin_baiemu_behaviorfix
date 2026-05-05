@@ -1,0 +1,2 @@
+# Astrbot_plugin_baiemu_behaviorfix
+astrbot_plugin_behavior_fix — 独立行为修复插件
