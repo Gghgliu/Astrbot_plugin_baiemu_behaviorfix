@@ -1,0 +1,10 @@
+name: astrbot_plugin_behavior_fix
+description: 修复AI行为问题：时间感知、重复拦截、纠正增强
+version: 1.0.0
+author: BaiEmu
+repo: ""
+help: |
+  行为修复插件，解决以下问题：
+  1. 时间盲区 —— 在 prompt 中注入北京时间锚点
+  2. 重复回复 —— 拦截与近期输出完全相同的消息
+  3. 纠正无效 —— 检测用户纠正并强制 LLM 承认错误

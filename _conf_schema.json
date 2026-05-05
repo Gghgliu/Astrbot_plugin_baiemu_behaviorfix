@@ -1,0 +1,59 @@
+{
+    "time_anchor": {
+        "type": "object",
+        "description": "时间锚点 — 在 LLM prompt 中注入当前北京时间",
+        "items": {
+            "enabled": {
+                "type": "bool",
+                "description": "启用时间锚点",
+                "default": true
+            }
+        },
+        "default": {}
+    },
+    "repeat_blocker": {
+        "type": "object",
+        "description": "重复拦截 — 阻止 bot 连续发送相同内容",
+        "items": {
+            "enabled": {
+                "type": "bool",
+                "description": "启用重复拦截",
+                "default": true
+            },
+            "window_size": {
+                "type": "int",
+                "description": "保留最近 N 条 bot 输出用于比对",
+                "hint": "建议 3-10",
+                "default": 5
+            },
+            "window_seconds": {
+                "type": "int",
+                "description": "时间窗口（秒），超时的旧记录自动过期",
+                "hint": "建议 120-600",
+                "default": 300
+            }
+        },
+        "default": {}
+    },
+    "correction_booster": {
+        "type": "object",
+        "description": "纠正增强 — 检测用户纠正并强制 LLM 承认错误",
+        "items": {
+            "enabled": {
+                "type": "bool",
+                "description": "启用纠正增强",
+                "default": true
+            },
+            "patterns": {
+                "type": "list",
+                "description": "纠正触发词列表",
+                "hint": "用户消息包含任意触发词时将注入纠正指令",
+                "items": {
+                    "type": "string"
+                },
+                "default": ["不对", "你错了", "纠正", "不是这样的", "你理解错了", "搞错了", "说错了", "别瞎说"]
+            }
+        },
+        "default": {}
+    }
+}
