@@ -1,10 +1,14 @@
-# astrbot_plugin_behavior_fix — bot行为增强插件
+# astrbot_plugin_behavior_fix —bot行为增强插件
 纠正时间，群聊重复发文，纠正信息量
 
+
 ##本插件包含AI生成代码，请谨慎使用
+这个时候各个AIAgent还未开智所以搞了这个临时的东西，现在可以扔了
+
+
+
 
 ## 插件功能
-
 3个核心行为：
 1. **增强时间**
 2. **群聊错误**
